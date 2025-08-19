@@ -34,6 +34,19 @@ console.log(isPalindrome('madam'))
 //   return Math.max(...arr);
 // };
 // console.log(maxNum([5, 1, 9, 3]));
+function removeDuplicate(arr) {
+  const isDuplicate = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (!isDuplicate.includes(arr[i])) {
+      isDuplicate.push(arr[i]);
+    }
+  }
+  
+  return isDuplicate;
+}
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicate(numbers));
 
 //Problem 8: Capitalize First Letter of Each Word
 
