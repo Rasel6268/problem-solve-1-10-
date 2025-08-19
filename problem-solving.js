@@ -69,7 +69,7 @@ const sumNum = (arr) => {
 console.log(sumNum([1, 2, 3, 4]));
 
 //Problem 7: Find Even Numbers in an Array
-function findEvenNumbers(arr) {
+const findEvenNumbers = (arr) => {
   const evenNumbers = [];
 
   for (let i = 0; i < arr.length; i++) {
@@ -81,7 +81,6 @@ function findEvenNumbers(arr) {
   return evenNumbers;
 }
 
-// Example usage
 const numbers = [1, 2, 3, 4, 5, 6];
 console.log(findEvenNumbers(numbers));
 
@@ -95,5 +94,42 @@ const capitalize = (str) => {
 };
 
 console.log(capitalize("hello world"));
+
+//Problem 9: Find the Factorial of a Number
+const factorial =(n) =>  {
+  if (n < 0) return 
+  let result = 1;
+  
+  for (let i = 1; i <= n; i++) {
+    result *= i; 
+  }
+  
+  return result;
+}
+
+
+console.log(factorial(5)); 
+
+//Problem 10: PingPong Challenge
+const pingPong =() => {
+  const result = [];
+  for (let i = 1; i <= 20; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        result.push("PingPong")
+    }
+    else if (i % 3 === 0) {
+        result.push("Ping")
+    }
+    else if (i % 5 === 0) {
+        result.push("Pong")
+    }
+    else result.push(i);
+  }
+  console.log(result.join(", "));
+}
+
+pingPong();
+
+
 
 
